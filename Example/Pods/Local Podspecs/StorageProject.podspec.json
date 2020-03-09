@@ -1,0 +1,22 @@
+{
+  "name": "StorageProject",
+  "version": "0.1.0",
+  "summary": "A short description of StorageProject.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/JaneXzz/StorageProject",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "JaneXzz": "616912591@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/JaneXzz/StorageProject.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "StorageProject/Classes/**/*"
+}
