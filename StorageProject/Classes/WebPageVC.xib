@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WebPageVC">
+            <connections>
+                <outlet property="constraint" destination="xJY-30-y6P" id="moK-ei-MZj"/>
+                <outlet property="titleLabel" destination="PiR-sX-Mzg" id="Sau-wW-CtG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6l-sY-EWY" userLabel="barView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NEu-DQ-bC6">
+                            <rect key="frame" x="0.0" y="19" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="CFV-Xt-Qko"/>
+                                <constraint firstAttribute="width" constant="40" id="b0x-6g-iEp"/>
+                            </constraints>
+                            <state key="normal" image="go_back_black"/>
+                            <connections>
+                                <action selector="didClickGoback:" destination="-1" eventType="touchUpInside" id="9CU-gY-32N"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PiR-sX-Mzg">
+                            <rect key="frame" x="50" y="51" width="314" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="PiR-sX-Mzg" firstAttribute="leading" secondItem="NEu-DQ-bC6" secondAttribute="trailing" constant="10" id="2Ya-gl-PmB"/>
+                        <constraint firstItem="PiR-sX-Mzg" firstAttribute="centerX" secondItem="S6l-sY-EWY" secondAttribute="centerX" id="68q-Nr-Ksr"/>
+                        <constraint firstItem="v1p-dF-cdy" firstAttribute="bottom" secondItem="PiR-sX-Mzg" secondAttribute="bottom" constant="13" id="dRr-ok-bkP"/>
+                        <constraint firstItem="v1p-dF-cdy" firstAttribute="bottom" secondItem="NEu-DQ-bC6" secondAttribute="bottom" constant="5" id="kfo-gI-bp1"/>
+                        <constraint firstAttribute="height" constant="64" id="xJY-30-y6P"/>
+                        <constraint firstItem="v1p-dF-cdy" firstAttribute="trailing" secondItem="PiR-sX-Mzg" secondAttribute="trailing" constant="50" id="xi0-mq-hJg"/>
+                        <constraint firstItem="NEu-DQ-bC6" firstAttribute="leading" secondItem="v1p-dF-cdy" secondAttribute="leading" id="zJa-PG-SDD"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="v1p-dF-cdy"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="S6l-sY-EWY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="GVK-sc-g0R"/>
+                <constraint firstItem="S6l-sY-EWY" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="hrf-rZ-vUk"/>
+                <constraint firstItem="S6l-sY-EWY" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="u5c-lS-HFe"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="139" y="153"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="go_back_black" width="30" height="30"/>
+    </resources>
+</document>

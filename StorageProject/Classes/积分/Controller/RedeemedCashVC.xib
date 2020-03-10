@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RedeemedCashVC">
+            <connections>
+                <outlet property="constraint" destination="cpi-2w-QB1" id="7g3-KJ-7B3"/>
+                <outlet property="tableView" destination="3ur-7C-52W" id="bhf-As-WUY"/>
+                <outlet property="titleLabel" destination="WrA-DB-t8x" id="EJk-qq-sHa"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hmh-xX-Rcg" userLabel="barView">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z8G-cN-xQC">
+                            <rect key="frame" x="0.0" y="19" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="40" id="17O-0c-3L6"/>
+                                <constraint firstAttribute="height" constant="40" id="ykG-h2-6KU"/>
+                            </constraints>
+                            <state key="normal" image="go_back_black"/>
+                            <connections>
+                                <action selector="didClickGoback:" destination="-1" eventType="touchUpInside" id="IWB-W1-jWP"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="兑换现金" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrA-DB-t8x">
+                            <rect key="frame" x="50" y="29.5" width="314" height="21.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="WrA-DB-t8x" firstAttribute="centerX" secondItem="hmh-xX-Rcg" secondAttribute="centerX" id="HZ0-1e-v9a"/>
+                        <constraint firstItem="WrA-DB-t8x" firstAttribute="leading" secondItem="z8G-cN-xQC" secondAttribute="trailing" constant="10" id="K71-72-0ij"/>
+                        <constraint firstItem="Inz-tp-SrB" firstAttribute="trailing" secondItem="WrA-DB-t8x" secondAttribute="trailing" constant="50" id="Nos-j9-bbt"/>
+                        <constraint firstItem="Inz-tp-SrB" firstAttribute="bottom" secondItem="z8G-cN-xQC" secondAttribute="bottom" constant="5" id="X8f-KV-DRi"/>
+                        <constraint firstAttribute="height" constant="64" id="cpi-2w-QB1"/>
+                        <constraint firstItem="Inz-tp-SrB" firstAttribute="bottom" secondItem="WrA-DB-t8x" secondAttribute="bottom" constant="13" id="nIT-A5-1Li"/>
+                        <constraint firstItem="z8G-cN-xQC" firstAttribute="leading" secondItem="Inz-tp-SrB" secondAttribute="leading" id="xTW-Mh-MOQ"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="Inz-tp-SrB"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3ur-7C-52W">
+                    <rect key="frame" x="0.0" y="64" width="414" height="832"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="HzZ-cX-wSE"/>
+                        <outlet property="delegate" destination="-1" id="aoi-Sa-4PM"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SkG-SD-Rev">
+                    <rect key="frame" x="0.0" y="64" width="414" height="1"/>
+                    <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="J8C-na-iae"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="PfO-l2-oDg"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3ur-7C-52W" firstAttribute="top" secondItem="hmh-xX-Rcg" secondAttribute="bottom" id="D7G-V2-osI"/>
+                <constraint firstItem="hmh-xX-Rcg" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="KdX-AP-FLW"/>
+                <constraint firstAttribute="bottom" secondItem="3ur-7C-52W" secondAttribute="bottom" id="NJy-1Z-RgF"/>
+                <constraint firstItem="3ur-7C-52W" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Nvq-eM-uKY"/>
+                <constraint firstItem="hmh-xX-Rcg" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Y8D-au-rNc"/>
+                <constraint firstItem="SkG-SD-Rev" firstAttribute="top" secondItem="hmh-xX-Rcg" secondAttribute="bottom" id="Zsk-hb-RyX"/>
+                <constraint firstAttribute="trailing" secondItem="SkG-SD-Rev" secondAttribute="trailing" id="eUE-v2-oL4"/>
+                <constraint firstItem="SkG-SD-Rev" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gv2-FF-fvD"/>
+                <constraint firstItem="hmh-xX-Rcg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uDc-CV-gkB"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="3ur-7C-52W" secondAttribute="trailing" id="wFQ-ut-oQ6"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="137.68115942028987" y="102.45535714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="go_back_black" width="30" height="30"/>
+    </resources>
+</document>

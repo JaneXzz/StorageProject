@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SignInRemindCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signIn_continuous_bg" translatesAutoresizingMaskIntoConstraints="NO" id="1Oq-Ba-Ohq">
+                        <rect key="frame" x="10" y="0.0" width="300" height="60"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="连续签到提醒" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STW-9Q-s4Q">
+                        <rect key="frame" x="25" y="8" width="98" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="签到成功后，第二天开启系统弹框提醒" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkB-Vd-5w2">
+                        <rect key="frame" x="25" y="32.5" width="208.5" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9wn-ks-XgX">
+                        <rect key="frame" x="25" y="29.5" width="200" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="IVm-e7-iho"/>
+                            <constraint firstAttribute="width" constant="200" id="YsL-Cx-7lI"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xbn-WY-u70" customClass="KLSwitch">
+                        <rect key="frame" x="253" y="17.5" width="42" height="25"/>
+                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="42" id="O4w-tq-BUz"/>
+                            <constraint firstAttribute="height" constant="25" id="RVz-bT-Z8y"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Xbn-WY-u70" secondAttribute="trailing" constant="25" id="0ij-hu-9LW"/>
+                    <constraint firstItem="STW-9Q-s4Q" firstAttribute="leading" secondItem="9wn-ks-XgX" secondAttribute="leading" id="1HW-sj-3bP"/>
+                    <constraint firstItem="lkB-Vd-5w2" firstAttribute="leading" secondItem="9wn-ks-XgX" secondAttribute="leading" id="4JQ-Je-qYF"/>
+                    <constraint firstItem="Xbn-WY-u70" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="8Cg-gI-L2h"/>
+                    <constraint firstAttribute="bottom" secondItem="1Oq-Ba-Ohq" secondAttribute="bottom" id="BvS-6H-6iZ"/>
+                    <constraint firstAttribute="trailing" secondItem="1Oq-Ba-Ohq" secondAttribute="trailing" constant="10" id="Hq6-MG-337"/>
+                    <constraint firstItem="1Oq-Ba-Ohq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Mno-VQ-XLu"/>
+                    <constraint firstItem="lkB-Vd-5w2" firstAttribute="top" secondItem="9wn-ks-XgX" secondAttribute="bottom" constant="2" id="Ub9-vq-jDe"/>
+                    <constraint firstItem="9wn-ks-XgX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="hMZ-dH-YMj"/>
+                    <constraint firstItem="1Oq-Ba-Ohq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="oIx-f5-mMw"/>
+                    <constraint firstItem="9wn-ks-XgX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="vOl-Mw-hry"/>
+                    <constraint firstItem="9wn-ks-XgX" firstAttribute="top" secondItem="STW-9Q-s4Q" secondAttribute="bottom" constant="2" id="zKi-J1-RVC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="switchButton" destination="Xbn-WY-u70" id="qTV-aV-DpK"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="94.419642857142847"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="signIn_continuous_bg" width="365" height="68"/>
+    </resources>
+</document>
